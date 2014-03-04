@@ -1,0 +1,97 @@
+print "hola mundo"
+
+# print "comentario"
+
+a=5 
+b=6
+c=a+b
+d=float(a)*float(b)
+
+print c , d
+
+e=a**2
+# cuadrado con ** 
+
+i=a/b
+print  i
+
+print "Modulo"
+# cuantas veces enteras  cabe un numero en el otro el residuo es la respuesta 
+
+x=a%3
+
+y=7%2
+
+#cuantas veces  cabe 7 en 2 = 3 y me  sobra 1 por lo  que y=1 
+
+print x
+
+print type (a), type (b), type (c)
+
+# float (algo) lo  hace  no entero 
+print "Comparaciones  arrojando true or false"
+
+print a==b 
+
+# false -  se  usa  para comparar
+
+print a!=b
+
+print "vectores o grupos"
+
+z= [1,2, "hola", 7.8, 9]
+
+print z[0:1]
+# no toma  encuenta  el uno  si  quiero  imprimir  als  2  primeras toca 
+
+print z[0:2]
+
+print z[0:]
+# de  0 en  adelante que es  lo mismo que [:]
+
+j=[3,4,7,9]
+
+t=z+j
+
+print t
+# las pega
+
+print  "loops" 
+
+if a==4:
+    print "a es igual a  cuatro"
+else:
+    print "a no es 4"
+
+print "elemplo 2"
+
+for w in range (10):
+    print w*2
+
+# imprime  10 veces eso 
+
+print "juegos con contadores"
+"""
+if a==3:
+  print "a es  igual a  3"
+else:
+    for q in range (5,10):
+        u=5+1
+        print u 
+las  comillas  comentan pedasos  grandes 
+"""
+print "while"
+
+a=0
+
+while a<10:
+    a+=3
+    print a
+
+print "para la  tarea"
+
+N=10
+
+for i in range (0,N):
+    print  i
+

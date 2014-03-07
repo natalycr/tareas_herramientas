@@ -1,5 +1,5 @@
 print "Juego Piedra, papel o tijera"
-
+import numpy 
 import sys
 
 pie=0
@@ -8,8 +8,13 @@ tij=2
 
 U=sys.argv(1)
 print U
-if (U==0):
+if (U==pie):
     print "Piedra"
+if (U==pap):
+    print "Papel"
+
+if (U==tij): 
+    print "Tijeras"
 
 C=np.random int(:3)
 print C

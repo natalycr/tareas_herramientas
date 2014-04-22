@@ -1,0 +1,46 @@
+import numpy as np
+
+print "Marcha Aleatoria 1er punto"
+
+# R=10  #Radio del Sol
+def marchaAleatoria(R):
+
+x=[]
+y=[]
+z=[]
+N=[]
+ra=[]
+p=1 # distancia de cada  paso
+
+i=0 #contador
+r=0 #radio en el que se encuentra la particula
+xo=0
+yo=0
+zo=0
+for r in range (R):
+
+    #para la particula pasos de 1
+    theta=np.random.randrange(0,180)
+    phi=np.random.randrange(0,90)
+
+    xi=p* np.sin(theta)* np.cos(phi) #posicion en x
+    yi=p* np.sin(theta)* np.sin(phi) #posicion en y
+    zi=p* np.cos(phi)#posicion en z
+    
+    xo=xo+xi
+    yo=xo+xi
+    zo=xo+xi
+    r=0#falta  colocar la posicion en el marco general
+    
+    i=i+1
+
+    x.append(xo)
+    y.append(xo)
+    z.append(xo)
+    N.append(i)
+    ra.append(r)
+
+
+
+
+    

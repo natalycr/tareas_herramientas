@@ -1,0 +1,9 @@
+import numpy as np
+import sys
+import math
+import matplotlib as plt
+import pylab as py 
+
+data = np.loadtxt("datosTrayectoria.dat")
+
+# minimos  cuadrados  ajustes 

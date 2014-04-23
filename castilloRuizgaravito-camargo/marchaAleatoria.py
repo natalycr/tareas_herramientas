@@ -5,13 +5,12 @@ import math
 print "Marcha Aleatoria 1er punto","\n"
 
 R=float(sys.argv[1])  #Radio del Sol
-print type(R)
+
 x=[]
 y=[]
 z=[]
 N=[]
 ra=[]
-
 
 i=0 #contador
 r=0 #radio en el que se encuentra la particula
@@ -21,8 +20,8 @@ zo=0
 while r<=R:
 
     #para la particula pasos de 1
-    theta=np.random.randrange(0,359)
-    phi=np.random.randrange(90,270)
+    theta=np.random.rand()*2*math.pi
+    phi=np.random.rand()*math.pi
 
     p=1 # distancia de cada  paso
     xi=p* np.sin(theta)* np.cos(phi) #posicion en x
@@ -40,9 +39,18 @@ while r<=R:
     N.append(i)
     ra.append(r)
     
-print N[-1],ra[-1]
+print N[-1],ra[-1], N[-2],ra[-2]
 
+outfile = open ("datosTrayectoria.dat", "w")
 
+#aline = outfile.write("x y z Numero pasos radioPaso \n")
+for j in range (len(x)):
+    xp=str(x[j])+" "
+    yp=str(y[j])+" "
+    zp=str(z[j])+" "
+    Np=str(N[j])+" "
+    rp=str(ra[j])+" "
+    aline = outfile.write(xp + yp + zp + Np + rp + "\n ")
 
+outfile.close()
 
-    

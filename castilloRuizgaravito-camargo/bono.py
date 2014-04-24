@@ -23,7 +23,9 @@ data = np.loadtxt("datosTrayectoria.dat")
 x = data[:,0]
 y = data[:,1]
 z = data[:,2]
-ax.scatter(x,y,z, '-r', color='g', s=8)
-
-
+print x[0]
+ax.plot(x,y,z, '-r', color='g')
+ax.scatter(x[0],y[0],z[0],  color='r',label="punto inicial")
+ax.scatter(x[-1], y[-1], z[-1], color='c',label="punto final")
+ax.legend()
 plt.show()

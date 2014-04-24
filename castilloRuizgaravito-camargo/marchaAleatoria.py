@@ -17,25 +17,33 @@ r=0 #radio en el que se encuentra la particula
 xo=0
 yo=0
 zo=0
-while r<=R:
+x.append(xo)
+y.append(yo)
+z.append(zo)
+N.append(i)
+ra.append(r)
 
+while r<=R:
+    i=i+1
+
+#    p=np.random.rand()*10
     #para la particula pasos de 1
-    theta=np.random.rand()*2*math.pi
-    phi=np.random.rand()*math.pi
+    phi =np.random.rand()*math.pi
+    theta=np.random.rand()*math.pi*2
 
     p=1 # distancia de cada  paso
-    xi=p* np.sin(theta)* np.cos(phi) #posicion en x
-    yi=p* np.sin(theta)* np.sin(phi) #posicion en y
+    xi=p* np.sin(phi)* np.cos(theta) #posicion en x
+    yi=p* np.sin(phi)* np.sin(theta) #posicion en y
     zi=p* np.cos(phi)#posicion en z
     
     xo=xo+xi
-    yo=xo+xi
-    zo=xo+xi
+    yo=xo+yi
+    zo=xo+zi
     r=(xo**2+yo**2+zo**2)**0.5
-    i=i+1
+
     x.append(xo)
-    y.append(xo)
-    z.append(xo)
+    y.append(yo)
+    z.append(zo)
     N.append(i)
     ra.append(r)
     
